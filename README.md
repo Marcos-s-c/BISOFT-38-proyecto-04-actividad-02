@@ -1,14 +1,30 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
-
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
-
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
 
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+<!--
+  <<< Author notes: Step 2 >>>
+  Start this step by acknowledging the previous step.
+  Define terms and link to docs.github.com.
+  TBD-step-2-notes.
+-->
+
+## Paso 2: Agregar el código funcional
+
+_Con el proyecto creado, ahora vamos a agregar código funcional_
+
+### :keyboard: Actividad: Paso 02
+
+1. Inicia Android Studio.
+1. En el directorio `commonMain/kotlin`, crea un nuevo directorio `common.example.search`.
+1. En este directorio, crea un archivo Kotlin, `Grep.kt`, y agrega la siguiente función:
+    ```kotlin
+    fun grep(lines: List<String>, pattern: String, action: (String) -> Unit) {
+      val regex = pattern.toRegex()
+      lines.filter(regex::containsMatchIn)
+        .forEach(action)
+    }
+    ```
+    Esta función está diseñada para parecerse al [comando grep de UNIX](https://es.wikipedia.org/wiki/Grep). Aquí, la función toma líneas de texto, un patrón utilizado como una expresión regular y una función que se invoca cada vez que una línea coincide con el patrón.
+1. Sube los cambios haciendo un commit de los archivos y push a la rama main.
+1. Espera unos 20 segundos y luego actualiza esta página (la que estás siguiendo las instrucciones). [GitHub Actions](https://docs.github.com/es/actions) se actualizará automáticamente al siguiente paso.
+
+
