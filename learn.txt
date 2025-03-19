@@ -1,0 +1,7 @@
+¿Qué aprendí?
+
+Aprendí a estructurar un proyecto multiplataforma separando el código funcional de las pruebas. También me familiaricé con funciones, expresiones regulares en Kotlin y la integración continua.
+
+¿Qué valor tienen las pruebas en el ámbito profesional?
+
+Las pruebas garantizan calidad, facilitan el mantenimiento y fortalecen el trabajo en equipo, reduciendo errores en producción.
